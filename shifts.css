@@ -162,6 +162,7 @@ select {
     line-height: 18px; 
     padding: 8px; 
     border-radius: 11px;
+    border: none;
     background-color: rgb(69, 144, 169);
     color: white;
     cursor: pointer;
