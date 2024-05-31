@@ -46,17 +46,17 @@
                         "<td align='center'>
                             <form action='updateGuard.php' method='POST'>
                                 <input type='hidden' name='Person_ID' value='" . $row["Person_ID"] . "'>
-                                <button type='submit'>Update</button>
+                                <button class='tableButton' type='submit'>Update</button>
                             </form>
                             <form action='checkHistory.php' method='POST'>
                                 <input type='hidden' name='Person_ID' value='" . $row["Person_ID"] . "'>
-                                <button type='submit'>Check History</button>
+                                <button class='tableButton' type='submit'>Check History</button>
                             </form>
                         </td>" .
                         "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='8' align='center'>No guards found</td></tr>";
+                echo "<tr><td class='center' colspan='8' align='center'>NO GUARDS FOUND</td></tr>";
             }
 
             $conn->close();

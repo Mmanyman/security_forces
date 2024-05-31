@@ -58,13 +58,13 @@ if ($result->num_rows > 0) {
                 <td align='center'>
                     <form action='removeGuard.php' method='POST'>
                         <input type='hidden' name='shiftID' value='" . $shiftID . "'>
-                        <button type='submit'>Remove</button>
+                        <button class='tableButton' type='submit'>Remove</button>
                     </form>
                 </td>
             </tr>";
     }
 } else {
-    echo "<tr><td colspan='6' align='center'>No active assignments</td></tr>";
+    echo "<tr><td class='center' colspan='6' align='center'>NO ACTIVE ASSIGNMENTS</td></tr>";
 };
 
 $conn->close();

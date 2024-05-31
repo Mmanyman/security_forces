@@ -146,11 +146,9 @@
             include 'activeAssignment.php';
             ?>
         </table>
-        <table>
             <?php
             include 'allHistoryTable.php';
             ?>
-        </table>
     </div>
 </body>
 </html>

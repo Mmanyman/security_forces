@@ -31,6 +31,7 @@
                 <th>Area Name</th>
                 <th>Working Days</th>
                 <th>Assigned</th>
+                <th>Action</th>
             </tr>
             <?php
             $conn = new mysqli("localhost", "root", "", "SecurityForces");
@@ -57,8 +58,14 @@
                             "<td align='center'>" . $time . "</td>" .
                             "<td align='center'>" . $area . "</td>" .
                             "<td align='center'>" . $row["Working_Days"] . "</td>" .
-                            "<td align='center'>" . $assigned . "</td>";
-                    echo "</tr>";
+                            "<td align='center'>" . $assigned . "</td>
+                            <td align='center'>
+                                <form action='shiftHistory.php' method='POST'>
+                                    <input type='hidden' name='Shift_ID' value='" . $row["Shift_ID"] . "'>
+                                    <button class='tableButton' type='submit'>Check History</button>
+                                </form>
+                            </td>
+                          </tr>";
                 }
             }
             $conn->close();

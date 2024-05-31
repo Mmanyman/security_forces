@@ -46,15 +46,15 @@ if ($result->num_rows > 0) {
                 <td>" . $endDate . "</td>
                 <td align='center'>
                     <div class='box'>
-                        <button class='button' onclick='showStartPopup($aSSID)'>Update Start Date</button>
+                        <button class='tableButton' onclick='showStartPopup($aSSID)'>Update Start Date</button>
                         <br>
-                        <button class='button' onclick='showEndPopup($aSSID)'>Update End Date</button>
+                        <button class='tableButton' onclick='showEndPopup($aSSID)'>Update End Date</button>
                     </div>
                 </td>
                 </tr>";
     }
 } else {
-    echo "<tr><td colspan='7' align>No assignments found</td></tr>";
+    echo "<tr><td class='center' colspan='7' align>NO ASSIGNMENT FOUND</td></tr>";
 }
 
 echo "</table>";
@@ -66,10 +66,10 @@ echo "<div class='overlay' id='startBox'>
             <div class='content'>
                 <div class='container'>
                     <form action='' method='POST'>
-                        <label>Start Assignment</label>
+                        <label>Start Assignment</label><br>
                         <input type='date' name='assign_date' required><br>
                         <input type='hidden' id='start_id' name='assignment_id'>
-                        <input type='submit' value='Update' name='StartButton'>
+                        <button type='submit' value='Update' class='back' name='StartButton'>Update</button>
                     </form>
                 </div>
             </div>
@@ -83,10 +83,10 @@ echo "<div class='overlay' id='endBox'>
             <div class='content'>
                 <div class='container'>
                     <form action='' method='POST'>
-                        <label>End Assignment</label>
+                        <label>End Assignment</label><br>
                         <input type='date' name='assign_date' required><br>
                         <input type='hidden' id='end_id' name='assignment_id'>
-                        <input type='submit' value='Update' name='EndButton'>
+                        <button type='submit' value='Update' class='back' name='EndButton'>Update</button>
                     </form>
                 </div>
             </div>
