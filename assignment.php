@@ -99,7 +99,7 @@
     <?php
     // Assigns an guard to an available shift 
     if (isset($_POST["SubmitButton"])) {
-        if ((!($_POST['guard_ID'] == "")) && (!($_POST['shift_ID'] == ""))) {
+        if (array_key_exists('shift_ID', $_POST) && array_key_exists('guard_ID', $_POST)) {
             $guardID = $_POST['guard_ID'];
             $shiftID = $_POST['shift_ID'];
             $assignDate = date('Y-m-d');
